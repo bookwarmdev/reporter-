@@ -1,0 +1,33 @@
+.bw-spacer{
+    margin-top: 80px;
+}
+  
+input.ng-touched.ng-invalid{
+    border-color: #dc3545 ;
+}
+
+.bw-color-1{
+    /* background: linear-gradient(-90deg, #dc3545, #5a6cbd,#dc3545); */
+    background-color: cornflowerblue;
+    color: white; 
+}
+
+.bw-color-2{
+    /* background: linear-gradient(-90deg, #dc3545, #5a6cbd,#dc3545); */
+    background-color: rgb(21, 48, 99);
+    color: white; 
+}
+
+.googleBtn{
+    color: white;
+}
+.googleBtn:hover{   
+    font-size: larger;
+}
+
+.facebookBtn{
+    color: white;
+}
+.facebookBtn:hover{  
+    font-size: larger; 
+}

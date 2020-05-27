@@ -1,0 +1,7 @@
+.card{
+    box-shadow: 0 0 10px rgb(176, 179, 173);
+}
+
+.card-img-top{
+    height: 400px;
+}

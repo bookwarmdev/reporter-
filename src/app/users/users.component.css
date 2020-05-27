@@ -1,0 +1,25 @@
+#bw-space{
+    margin-top:5%;
+}
+
+.img-jumbo{    
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(31,9,58,121)), url("/assets/img/jumbo.jpg"); 
+    background-size: 100% , 100%;
+}
+
+/* .overlay{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5px;
+}
+#bw-row{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10px;
+} */

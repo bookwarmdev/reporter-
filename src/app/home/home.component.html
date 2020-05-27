@@ -1,0 +1,13 @@
+<div class="container"> 
+    <div class="col-sm-12 col-md-6 col-lg-9" *ngFor="let showpost of post; index as i">
+      <div class="card">
+        <img [src]="showpost.imageUrl" class="card-img-top" alt="report" > 
+        <div class="card-body">
+          <h5 class="card-title"> {{ showpost.titles | titlecase }} </h5>
+          <p class="card-text" id="dw-card-text"> {{ showpost.description }} </p>  
+            <!-- <button class="btn btn-primary" (click) = "readMore(i)">Go somewhere</button>  -->
+        </div>
+      </div> 
+      <br>
+    </div>      
+</div>

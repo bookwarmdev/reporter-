@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+            <div class="container bw-space" *ngFor="let showpost of post; index as i">
+                <div class="card" id="bw-space-post">
+                  <img [src]="showpost.imageUrl" class="card-img-top" alt="report">
+                  <div class="card-body">
+                        <h5 class="card-title"> {{ showpost.titles | titlecase }} </h5>
+                        <p class="card-text"> {{ showpost.description }} </p>  
+                        <!-- <button class="btn btn-primary" (click) = "readMore(i)">Go somewhere</button>  -->
+                  </div>
+                </div> 
+                <br>
+            </div>  
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-12">
+                    <div class="card" id="bw-space-card">
+                        <div class="card-header">
+                        <h5>Create New Report</h5>
+                        </div>
+                        <div class="card-body">
+                        <!-- <form> -->
+                            <div class="form-group">
+                                <label >Incident Header</label>
+                                <input type="text" class="form-control" [(ngModel)]="titles" required>
+                            </div>
+                            <div class="form-group">
+                                <label >Incident Description</label>
+                                <textarea name="" id="" cols="40" rows="5" class="form-control" [(ngModel)] = "description" required ></textarea> 
+                            </div> 
+                            <div class="input-group mb-3">  
+                                <div class="form-group col-12 image">
+                                  <input
+                                    type="file" id="file" #userPhoto  (change)="onFileSelected($event)" name="image" autocomplete="off"
+                                  />
+                                </div>
+                                <div *ngIf="fb" class="list">
+                                  <img src="{{ fb }}" alt="" class="bw-image"/>
+                                </div>
+                              </div>   
+                            <button type="submit" class="btn btn-success" (click) = "createNewPost()" >Submit</button>
+                        <!-- </form> -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+

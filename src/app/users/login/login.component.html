@@ -1,0 +1,37 @@
+<app-user-header></app-user-header> 
+
+<div class="bw-spacer"></div>
+
+<div class="container" style="margin-top: 5%;">
+  <div class="row justify-content-center">
+    <div class="col-sm-8 col-lg-6">
+      <div class="card bg-light text-center">
+        <div class="card-header">
+          <h2>Log In</h2>
+        </div>
+        <div class="card-body"> 
+            <form #f = "ngForm" (ngSubmit) = "authService.SignIn(email.value , password.value)"> 
+              <input ngModel type="email" #email="ngModel" name="email" class="form-control  bw-tab" placeholder="Enter Email" required> 
+              <div class="alert alert-danger" *ngIf = "email.touched && email.errors?.required" >Email is required</div>
+              <div class="alert alert-danger" *ngIf = "email.touched && email.errors?.email" >Your emaill dosen't match email format</div>
+              <br>
+    
+              <input ngModel type="password" #password="ngModel" name="password" class="form-control  bw-tab" placeholder="Enter Password" required minlength="6">  
+              <div class="alert alert-danger" *ngIf = "password.touched && password.errors?.required">Password is required</div>
+              <div class="alert alert-danger" *ngIf = "password.touched && password.errors?.minlength" >Password most be 6+ characters</div>
+              <br>
+              
+              <div class="forgotPassword">
+                <a routerLink="/forget-password">Forgot Password?</a>
+              </div>
+              <br>
+
+              <button class="btn  btn-primary btn-block" [disabled]="f.invalid">Login</button>
+              <p>Don't have a account?<a routerLink = "/register">Sign Up</a>.</p>          
+          </form>  
+        
+        </div>
+    </div> 
+    </div>      
+  </div>
+</div>    

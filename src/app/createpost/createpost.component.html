@@ -1,0 +1,46 @@
+<style>
+.error {
+    color: red;
+}
+
+img {
+    width: 256px;
+}
+</style>
+
+
+<app-header></app-header> 
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card">
+          <div class="card-header">
+            <h5>Create New Report</h5>
+          </div>
+          <div class="card-body">
+            <!-- <form> -->
+              <div class="form-group">
+                <label >Incident Header</label>
+                <input type="text" class="form-control"  [(ngModel)]="titles" required>
+              </div>
+              <div class="form-group">
+                <label >Incident Description</label>
+                <textarea name="" id="" cols="40" rows="5" class="form-control" [(ngModel)] = "description" required></textarea> 
+              </div>  
+              <div class="input-group mb-3">  
+                <div class="form-group col-12 image">
+                  <input
+                    type="file" id="file" #userPhoto  (change)="onFileSelected($event)" name="image" autocomplete="off"
+                  />
+                </div>
+                <div *ngIf="fb" class="list">
+                  <img src="{{ fb }}" alt="" />
+                </div>
+              </div> 
+              <button type="submit" class="btn btn-success" (click) = "createNewPost()">Submit</button>
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
